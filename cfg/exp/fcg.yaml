@@ -1,0 +1,27 @@
+name: "fcg"
+test_pack: "fcg_1"
+training_pack: "fcg_2"
+model_name: "fcg/cracktip"
+var_x: "Cycle"
+var_y: "FCG"
+degradation: "negative"  # if degradation trend is downward, "positive" else "negative"
+y_failure: 5
+horizon: 450
+
+save_data_fig: True
+show_fig: False
+save_weights: False
+load_weights: True
+random_seed: True # Random seed for reproducibility
+
+Ns: 1000  # Number of Particles
+hidden_nodes: 20  # Number of hidden nodes
+epochs: 500  # Number of epochs for training
+
+s2x0: 0.0005  # Initial state noise
+s2x1: 50  # State noise decay
+s2x2: 0.000001  # State noise floor
+s2z: 0.05  # Measurement noise
+
+alpha: 0.2 # Alpha-bound for beta metric
+

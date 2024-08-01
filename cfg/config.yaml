@@ -1,0 +1,9 @@
+defaults:
+  - exp: batteries  # Default experiment used 
+  - hydra: default
+
+dir_project : ${hydra:runtime.cwd}/ 
+dir_res: results/${exp.name}
+exp_name: ${now:%Y-%m-%d}_${now:%H-%M-%S}
+seed: 42
+sweep: false

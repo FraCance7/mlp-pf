@@ -1,0 +1,29 @@
+name: "batteries"
+test_pack: "capacity_battery5"
+training_pack: "capacity_battery7"
+model_name: "battery5"
+var_x: "Cycle"
+var_y: "Capacity"
+degradation: "positive"  # if degradation trend is downward, "positive" else "negative"
+y_failure: 1.3
+horizon: 200
+
+save_data_fig: True
+show_fig: False
+save_weights: False
+load_weights: True
+random_seed: True # Random seed for reproducibility
+
+Ns: 500  # Number of Particles
+hidden_nodes: 3  # Number of hidden nodes
+epochs: 100  # Number of epochs for training
+
+s2x0: 0.005  # Initial state noise
+s2x1: 100  # State noise decay
+s2x2: 0.0001  # State noise floor
+s2z: 0.05  # Measurement noise
+
+alpha: 0.2 # Alpha-bound for beta metric
+
+
+
